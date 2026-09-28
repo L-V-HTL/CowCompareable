@@ -3,18 +3,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Cow> liste = new List<Cow>()
+        string inputPfad = Path.Combine(AppContext.BaseDirectory, "input.txt");
+        List<Cow> liste = new List<Cow>();
+        foreach (string zeile in File.ReadAllLines(inputPfad))
         {
-            new Cow("Milka","lila",4),
-            new Cow("Paula","weiss",6),
-            new Cow("Conny","schwarz",4),
-            new Cow("Berta","weiss",7),
-            new Cow("Mathias","rosa",4),
-            new Cow("Milka","rosa",4),
-            new Cow("Milka","lila",5)
-        };
+            string[] werte = zeile.Split(';');
+            liste.Add(new Cow(werte[0], werte[1], int.Parse(werte[2])));
+        }
 
-        // List.Sort() verwendet Cow.CompareTo aus Cow.cs.
+        
         foreach (Cow kuh in liste)
         {
             Console.WriteLine($"{kuh.Name}, {kuh.Color}, {kuh.Age}");
