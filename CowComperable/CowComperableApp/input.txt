@@ -1,0 +1,7 @@
+﻿Milka;lila;4
+Paula;weiss;6
+Conny;schwarz;4
+Berta;weiss;7
+Mathias;rosa;4
+Milka;rosa;4
+Milka;lila;5
