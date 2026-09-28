@@ -10,3 +10,6 @@ obj/
 
 ## macOS
 .DS_Store
+
+# Lokale .NET CLI Dateien
+.dotnet-cli-home/
